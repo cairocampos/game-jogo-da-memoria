@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Jogo da Memória</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <div id="model">
+            <div class="card" data-id="">
+                <div class="card-front"></div>
+                <div class="card-back"><img src="" data-card="" width="250" height="250"></div>
+            </div>
+        </div>
+
+        <div id="score">
+            <div class="score">Score: <span>0</span></div>
+            <h1 align="center">JOGO DA MEMÓRIA</h1>
+            <div><button onclick="change();">Embaralhar</buttonclosest(".card-close").style.visibility = "hidden"></div>
+        </div>
+        <main></main>
+        
+
+        <div class="modal">
+            <div class="modal-content">
+                <div class="modal-info"></div>
+                <div class="close-modal">
+                    <button onclick="closeModal();">Fechar</button>
+                </div>
+            </div>
+        </div>
+              
+        <script type="text/javascript" src="assets/js/items.js"></script>
+        <script type="text/javascript" src="assets/js/script.js"></script>
+    </body>
+</html>

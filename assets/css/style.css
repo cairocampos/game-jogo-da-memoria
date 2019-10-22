@@ -1,0 +1,119 @@
+* {
+    font-family: 'Arial';
+}
+#model {
+    display: none;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+}
+
+.card {
+    height: 250px;
+    width: 250px;
+    margin: 5px;
+    background-color: #CCC;
+    perspective: 800px;
+    transform-style: preserve-3d;
+    position:relative;
+    animation: all .8s ease-in;
+    cursor: pointer;
+}
+
+.card-close {
+    opacity: 0;
+    visibility: hidden;
+    height: 250px;
+    width: 250px;
+    margin: 5px;
+}
+
+.card-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    height: 250px;
+    width: 250px;
+    z-index: 1;
+    background-color: #EEE;
+    text-align: center;
+    line-height: 250px;
+    font-size: 3em;
+}
+
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 250px;
+    width: 250px;
+    transform: translateX(-180deg);
+    background-color: #000;
+}
+
+.card-back img {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+#score {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#score button, .close-modal button{
+    border: none;
+    background-color: #191970;
+    color: #FFF;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: .5s ease;
+    border-radius: 5px;;
+}
+
+#score button:hover, .close-modal button:hover {
+    background-color: #2323a8;
+}
+.score {
+    font-size: 2em;
+}
+.score span {
+    background-color: #333;
+    color: #FFF;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    display: none;
+}
+.modal-content {
+    position: absolute;
+    height: 250px;
+    width: 500px;
+    left: 50%;
+    top: 20%;
+    margin-left: -250px;
+    background-color: #FFF;
+    padding: 10px;
+    text-align: center;
+}
